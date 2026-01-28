@@ -1,0 +1,173 @@
+{
+    "app": {
+        "shorName": "fadrixsys",
+        "name": "Fadrix SYS",
+        "version": "4.0",
+        "build": "b2024.11.01",
+        "description": "Sistema de controle e gerenciamento de vendas e marketplaces."
+    },
+    "release": {
+        "b2024.04.01": [
+            {"REDESIGN": "Novo template na tela de login e módulo de vendas."},
+            {"ADD": "Adicionado opção de modo escuro e personalização de cores do sistema."},
+            {"ADD": "Adicionado novas informações no módulo de vendas: listagem de pedidos com pendências, listagem de envios do dia, dashboard com análises das vendas e painel de reputação dos marketplaces."},
+            {"ADD": "Adicionado opção de salvar a listagem do envios do dia em planilha do excel."},
+            {"ADD": "Adicionado fitros de canal de venda e período no módulo de vendas."},
+            {"ADD": "Adicionado nova integração de marketplace: Shein."},
+            {"ADD": "Adicionado opção de importar pedidos direto via API da Shopee, MercadoLivre e Shein, sem passar por hubs (Ideris ou Tiny)."},
+            {"ADD": "Adicionado opção de poder alterar a imagem do produto durante a importação do pedido."},
+            {"ADD": "Adicionado opção de poder fazer comentário e também deixá-lo fixo no Asana, durante a importação do pedido."},
+            {"ADD": "Adicionado novo widget 'Comentário' na visualização do pedido, com opção de comentar em texto, imagem e anexos e, também de poder enviar o comentário para o Asana."},
+            {"ADD": "Adicionado novo widget 'Asana' na visualização do pedido, podendo diretamente no pedido ver informações do mesmo no Asana, como o responsável, qual projeto está, e qual o status."},
+            {"FIX": "Corrigido erro que criava a tarefa do pedido no Asana, e após uma exceção excluía a tarefa criada."}
+        ],
+        "b2024.04.03": [
+            {"FIX": "Corrigido erro de imagem do produto diferente, quando era um produto com variação na PrestaShop."}
+        ],
+        "b2024.04.04": [
+            {"FIX": "Corrigido erro de número do pedido MercadoLivre diferente quando era um pedido de carrinho fazendo a importação pela API do MercadoLivre."},
+            {"FIX": "Corrigido exceção ao salvar produto de um pedido que está sem SKU importando pela API do MercadoLivre."},
+            {"FIX": "Corrigido erro de ID da imagem do produto sem variação em pedidos PrestaShop."},
+            {"FIX": "Corrigido erro que lança exceção ao iniciar o sistema estando com a página de visualização de pedido aberta."}
+        ],
+        "b2024.04.05": [
+            {"FIX": "Corrigido erro que lança exceção por datetime em formato sem hora na importação de pedidos via TinyERP."},
+            {"FIX": "Corrigido número de unidade do produto em float na importação de pedidos via TinyERP."},
+            {"FIX": "Corrigido exceção na importação do pedido por REF que não eram mais adicionadas a página."}
+        ],
+        "b2024.04.06": [
+            {"ADD": "Adicionado nova integrção de marketplace e importação de pedidos: Magazine Luiza."}
+        ],
+        "b2024.04.07": [
+            {"FIX": "Corrigido erro de importação duplicada em pedidos de carinho do MercadoLivre importando via API do MercadoLivre."},
+            {"FIX": "Nova correção de exceção na importação do pedido por REF que não eram mais adicionadas a página."}
+        ],
+        "b2024.04.08": [
+            {"FIX": "Corrigido erro de download da imagem do produto quando a imagem era em modo RGBA, e que impedia de criar a tarefa no Asana."},
+            {"FIX": "Corrigido erro ao importar pedido Shein que tenha um produto sem SKU do vendedor importando via API do Shein."},
+            {"FIX": "Corrigido erro de download da planilha de envios do dia. Alterado a forma de download para link direto de dowload via diretório assets."}
+        ],
+        "b2024.04.09": [
+            {"FIX": "Corrigido controle de ID da sessão do usuário conectado, não sendo mais possível haver duas sessões ativas do mesmo usuários."},
+            {"FIX": "Corrigido a exceção lançada na página de visualização do pedido ao clicar no botão de retorna a listagem de pedidos."}
+        ],
+        "b2024.04.10": [
+            {"FIX": "Corrigido exceção no controle de sessão do usuário."},
+            {"FIX": "Corrigido exceção no evento on_close quando a sessão do usuário expira."},
+            {"FIX": "Corrigido importação de pedidos via API Magalu, erro com o campo de SKU do produto que a API informava."}
+        ],
+        "b2024.04.11": [
+            {"FIX": "Corrigido exceção no controle de sessão do usuário."},
+            {"FIX": "Corrigido exceção no evento on_close quando a sessão do usuário expira."},
+            {"FIX": "Corrigido importação de pedidos via API Magalu, erro com o campo de SKU do produto que a API informava."}
+        ],
+        "b2024.04.12": [
+            {"FIX": "Add tratamento de exceção no controle de sessão do usuário."},
+            {"FIX": "Add tratamento de exceção na importação de pedidos ao fazer uma busca (função get_order)."}
+        ],
+        "b2024.04.13": [
+            {"FIX": "Add tratamento de exceção na importação de pedidos ao limpar o formulário (função __clear_form)"}
+        ],
+        "b2024.04.14": [
+            {"UPDATE": "Atualizado mecanismo interno para busca de pedidos no módulo de vendas, afim de exibir pedidos que estejam em duplicidade."},
+            {"UPDATE": "Atualizado a aba de envios do dia para exibir os pedidos com ordenação por data e horário, no módulo de vendas."},
+            {"UPDATE": "Atualizado a aba de pendência para incluir novas pendências como pedidos sem tarefas no asana. no módulo de vendas."},
+            {"UPDATE": "Atualizado mecanismo de consulta de pedidos por status de pendência para aceitar fitro de canal de venda, no módulo de vendas."},
+            {"UPDATE": "Atualizado mecanismo de consulta de pedidos para poder também retornar vendas sem parametro de LIMIT, no módulo de vendas."},
+            {"UPDATE": "Atualizado repositório COMPANY para busca por nome."}
+        ],
+        "b2024.04.15": [
+            {"FIX": "Corrigido validação para importação de pedidos de carrinho do MercadoLivre, via MercadoLivre_API"},
+            {"UPDATE": "Adicionado opção de baixar em Excel relatório de Rank dos Produtos Mais vendidos na ana Analytics em Gerenciamento de Vendas."}
+        ],
+        "b2024.04.16": [
+            {"UPDATE": "Atualizado ABA de Pendências em Gerenciamento de Vendas para incluir relatório de pedidos duplicados."},
+            {"UPDATE": "Atualizado busca no analytics para pedidos com número de pedido duplicado."}
+        ],
+        "b2024.04.17": [
+            {"UPDATE": "Atualizado visualização de pedidos, na ABA ASANA com o suporte para criar tarefa no Asana, em pedidos que houve erro durante a importação e não foi criado a tarefa."}
+        ],
+        "b2024.04.18": [
+            {"FIX": "Criado validação para impedir importação duplicada de pedidos."}
+        ],
+        "b2024.04.19": [
+            {"UPDATE": "Nova opção para baixar planilha com envios do dia com informações da tarefa no Asana (Status e Projeto Atual), em Gerenciamento de Vendas > Envios."}
+        ],
+        "b2024.04.20": [
+            {"UPDATE": "Atualizado planilha de envios com informações do Asana, agora inclui link para a tarefa no Asana."}
+        ],
+        "b2024.04.21": [
+            {"FIX": "Correção de exceção ao gerar planilha de envios com informações do Asana quando uma tarefa não era encontrada."}
+        ],
+        "b2024.04.22": [
+            {"UPDATE": "Atualização de icones do sistema."}
+        ],
+        "b2024.04.23": [
+            {"FIX": "Correção da data de envios dos pedidos SHEIN utilizando a nova regra da plataforma."}
+        ],
+        "b2024.04.24": [
+            {"UPDATE": "Novo relatório de planilha - envios do dia Shein com status do marketplace e status do Asana."}
+        ],
+        "b2024.04.25": [
+            {"ADD": "Criado sistema de notificações, para alertar usuários de informações do sistema, como atualizações e link de download de relatórios."}
+        ],
+        "b2024.04.26": [
+            {"UPDATE": "Atualizado controle de alertas (snackbar) do sistema."},
+            {"UPDATE": "Barra de ferramentas do módulo de vendas responsivo para mobile (UP1)."}
+        ],
+        "b2024.04.27": [
+            {"UPDATE": "Atualização de design responsivo módulo de vendas: barra ferramenta + lista de pedidos e envios (UP1)"},
+            {"UPDATE": "Novos relatórios em planilha de envios do dia no módulo de vendas, agora exclusivo para a Shopee."}
+        ],
+        "b2024.04.28": [
+            {"ADD": "Adicionado nova opção para importação de pedidos: Americanas API."}
+        ],
+        "b2024.04.29": [
+            {"FIX": "Corrigido controle de snackbar do sistema que causava excesão no sistema."}
+        ],
+        "b2024.04.30": [
+            {"UPDATE": "Nova empresa adicionada XDRI SUBLIMAÇÃO."},
+            {"UPDATE": "Nova conta e integração do MercadoLivre adicionada XDRI SUBLIMAÇÃO."}
+        ],
+        "b2024.04.31": [
+            {"UPDATE": "Novos filtro de data para busca de pedidos e listagem de envios: 'ONTEM' e '180 dias'."},
+            {"UPDATE": "Atualizado a listagem de envios para buscar os pedidos pela data de envio do marketplace."},
+            {"FIX": "Corrigido a caixa de diálogo de progresso para impedir que seja fechada enquando o sistema está processando alguma tarefa."}
+        ],
+        "b2024.08.01": [
+            {"FIX": "Corrigido os relatórios em planilhas FULL (Shein + Shopee) para se adeguar aos novos filtros de período."}
+        ],
+        "b2024.08.02": [
+            {"UPDATE": "Atualizado integração com a API da MAGALU."},
+            {"FIX": "Corrigido erro ao salvar comentário, anexos e imagens nas conversas do pedido."}
+        ],
+        "b2024.090.01": [
+            {"UPDATE": "Novo módulo de comentários."},
+            {"UPDATE": "Novo módulo Asana."},
+            {"FIX": "Corrigido exibição da logomarca na tela de login para se adaptar conforme o modo de iluminação (claro/escuro)."}
+        ],
+        "b2024.10.01": [
+            {"FIX": "Corrigido atualização de aba quando um filtro de canal ou de período é selecionado."},
+            {"ADD": "Nova planilha de envio SHOPEE FULL-3, para listar todos os pedidos com envios do dia que ainda não foram emitidos as notas fiscais."},
+            {"UPDATE": "Refatoração das integrações APIs (Shopee, Shein, Prestashop, MercadoLivre, Magalu), agora implementando uma interface padrão para todas, e centralizando na inteface a conexão com o banco de dados."}
+        ],
+        "b2024.10.16": [
+            {"ADD": "Adicionado regra para bloqueio do seletor de data de envio na importação do pedido, para marketplaces que já informam a data na integração."},
+            {"ADD": "Adicionado regra interna da empresa para calculo de data de envio dos pedidos Shopee."}
+        ],
+        "b2024.10.18": [
+            {"ADD": "Novo recurso de importação em massa de pedidos. Inicialmente disponível apenas para a integração da Shopee."}
+        ],
+        "b2024.10.22": [
+            {"UPDATE": "Adicionado opção de importação em massa de pedidos para a integração da Shein."}
+        ],
+        "b2024.10.25": [
+            {"UPDATE": "Atualizado integração com a API Asana, Americanas, Ideris, Correios, Magalu, MercadoLivre, Prestashop, Shein, Shopee."},
+            {"ADD": "Adicionado uma nova interface padrão para implementar as intragrações de API, controlando as credênciais de acesso em uma única classe."},
+            {"UPDATE": "Atualizado o controlador de Tarefas Asana. As informações foram padronizadas para futuras atualizações."}
+        ],
+        "b2024.11.01": [
+            {"UPDATE": "Adicionado QRCODE do número do pedido, nas descrição de tarefas ao enviar um pedido pro Asana."}
+        ]         
+    }
+}

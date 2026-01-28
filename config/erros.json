@@ -1,0 +1,16 @@
+{
+    "sistema": {
+        "S001": "Erro, sem conexão com a internet."
+    },
+    
+    "ideris": {
+        "I001": "Autorização negada, token inválido ou não informado.",
+        "I002": "Pedido não encontrado ou sincronizado. Favor, verifique o número do pedido informado e tente novamente. Para pedidos de Carrinho do MercadoLivre, marcar a opção CARRINHO."
+    },
+
+    "prestashop": {
+        "PS001": "Autorização negada, token inválido ou não informado.",
+        "PS002": "Pedido não encontrado. Favor, verifique o número do pedido informado e tente novamente.",
+        "PS003": "Pedido não encontrado. Favor, verifique o número do pedido ou a loja selecionada e tente novamente."
+    }    
+}
